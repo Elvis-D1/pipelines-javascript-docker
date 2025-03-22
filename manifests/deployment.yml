@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: elvisdpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elvisdpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: elvisdpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: elvisdpipelinesjavascriptdocker 
+          image: mycontainerregistry690.azurecr.io/elvisdpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
